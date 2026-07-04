@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bazaario | Online Shopping Homepage Clone</title>
+  <meta name="description" content="A fully responsive Amazon-style homepage clone built with HTML5 and CSS3 only.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================= -->
+  <!-- HEADER : ROW 1 - Main Header  -->
+  <!-- ============================= -->
+  <header class="site-header">
+    <div class="header-row header-row--top">
+
+      <!-- Logo -->
+      <a href="#" class="logo" aria-label="bazaario home">
+        <span class="logo__mark">b</span><span class="logo__text">azaario</span>
+        <span class="logo__tagline">.com</span>
+      </a>
+
+      <!-- Delivery Location -->
+      <button class="header-item deliver-to" type="button">
+        <span class="deliver-to__icon" aria-hidden="true">📍</span>
+        <span class="deliver-to__text">
+          <small>Deliver to Alex</small>
+          <strong>New York 10001</strong>
+        </span>
+      </button>
+
+      <!-- Search -->
+      <form class="search-bar" role="search" action="#" onsubmit="return false;">
+        <label for="search-department" class="visually-hidden">Select department</label>
+        <select id="search-department" class="search-bar__department">
+          <option>All</option>
+          <option>Electronics</option>
+          <option>Fashion</option>
+          <option>Home &amp; Kitchen</option>
+          <option>Beauty</option>
+          <option>Sports</option>
+        </select>
+        <label for="search-input" class="visually-hidden">Search bazaario</label>
+        <input id="search-input" class="search-bar__input" type="text" placeholder="Search bazaario">
+        <button class="search-bar__button" type="submit" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </form>
+
+      <!-- Language Selector -->
+      <button class="header-item lang-selector" type="button">
+        <span class="lang-selector__flag" aria-hidden="true">🇺🇸</span>
+        <span>EN</span>
+        <span class="chevron" aria-hidden="true">▾</span>
+      </button>
+
+      <!-- Account & Lists -->
+      <button class="header-item account-lists" type="button">
+        <small>Hello, sign in</small>
+        <strong>Account &amp; Lists <span class="chevron" aria-hidden="true">▾</span></strong>
+      </button>
+
+      <!-- Returns & Orders -->
+      <button class="header-item returns-orders" type="button">
+        <small>Returns</small>
+        <strong>&amp; Orders</strong>
+      </button>
+
+      <!-- Cart -->
+      <button class="header-item cart" type="button" aria-label="Cart, 0 items">
+        <span class="cart__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="10" cy="21" r="1.2"/><circle cx="18" cy="21" r="1.2"/></svg>
+          <span class="cart__count">0</span>
+        </span>
+        <span class="cart__label">Cart</span>
+      </button>
+    </div>
+
+    <!-- ============================= -->
+    <!-- HEADER : ROW 2 - Sub Nav      -->
+    <!-- ============================= -->
+    <nav class="header-row header-row--nav" aria-label="Secondary navigation">
+
+      <!-- CSS-only dropdown via :focus-within -->
+      <div class="dropdown">
+        <button class="nav-link nav-link--hamburger" type="button">
+          <span class="hamburger-icon" aria-hidden="true">☰</span> All
+        </button>
+        <div class="dropdown__panel">
+          <h3 class="dropdown__heading">Trending</h3>
+          <a href="#">Best Sellers</a>
+          <a href="#">New Releases</a>
+          <a href="#">Movers &amp; Shakers</a>
+          <h3 class="dropdown__heading">Shop by Department</h3>
+          <a href="#">Electronics</a>
+          <a href="#">Fashion</a>
+          <a href="#">Home &amp; Kitchen</a>
+          <a href="#">Beauty &amp; Personal Care</a>
+          <a href="#">Sports &amp; Outdoors</a>
+          <h3 class="dropdown__heading">Programs &amp; Features</h3>
+          <a href="#">Gift Cards</a>
+          <a href="#">Subscribe &amp; Save</a>
+        </div>
+      </div>
+
+      <a class="nav-link" href="#">Today's Deals</a>
+      <a class="nav-link" href="#">Registry</a>
+      <a class="nav-link" href="#">Prime</a>
+      <a class="nav-link" href="#">Customer Service</a>
+      <a class="nav-link" href="#">Gift Cards</a>
+      <a class="nav-link" href="#">Sell</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============================= -->
+    <!-- HERO SECTION                  -->
+    <!-- ============================= -->
+    <section class="hero" aria-label="Promotional banner">
+      <button class="hero__arrow hero__arrow--left" aria-label="Previous promotion" type="button">&#10094;</button>
+
+      <div class="hero__banner">
+        <img class="hero__bg" src="https://loremflickr.com/1500/500/school,supplies" alt="Back to school promotional background">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Shop Back to School</p>
+          <h1 class="hero__title">School essentials<br>at every price</h1>
+        </div>
+      </div>
+
+      <button class="hero__arrow hero__arrow--right" aria-label="Next promotion" type="button">&#10095;</button>
+    </section>
+
+    <!-- Hero overlaps into first card row, like Amazon -->
+    <section class="card-grid card-grid--overlap" aria-label="Featured categories">
+      <article class="card">
+        <h2 class="card__title">Must-have school supplies</h2>
+        <img class="card__image" src="https://loremflickr.com/300/220/school,stationery" alt="School supplies">
+        <a class="card__link" href="#">Shop now</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Backpacks &amp; more</h2>
+        <img class="card__image" src="https://loremflickr.com/300/220/backpack,bag" alt="Backpacks">
+        <a class="card__link" href="#">Shop now</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Shop fashion for less</h2>
+        <img class="card__image" src="https://loremflickr.com/300/220/fashion,clothing" alt="Fashion items">
+        <a class="card__link" href="#">Shop now</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Wear these new arrivals</h2>
+        <img class="card__image" src="https://loremflickr.com/300/220/fashion,clothes" alt="New clothing arrivals">
+        <a class="card__link" href="#">Shop now</a>
+      </article>
+    </section>
+
+    <!-- ============================= -->
+    <!-- SECOND CARD ROW               -->
+    <!-- ============================= -->
+    <section class="card-grid" aria-label="Home and kitchen categories">
+      <article class="card">
+        <h2 class="card__title">Home essentials under $30</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/home,decor" alt="Home essential item">
+          <img src="https://loremflickr.com/140/140/candle,home" alt="Home essential item">
+          <img src="https://loremflickr.com/140/140/throw,pillow" alt="Home essential item">
+          <img src="https://loremflickr.com/140/140/storage,basket" alt="Home essential item">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Top picks in kitchen</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/kitchen,cookware" alt="Kitchen item">
+          <img src="https://loremflickr.com/140/140/cutting,board" alt="Kitchen item">
+          <img src="https://loremflickr.com/140/140/coffee,maker" alt="Kitchen item">
+          <img src="https://loremflickr.com/140/140/kitchen,utensils" alt="Kitchen item">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Refresh out your look</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/jewelry,accessories" alt="Fashion accessory">
+          <img src="https://loremflickr.com/140/140/handbag,purse" alt="Fashion accessory">
+          <img src="https://loremflickr.com/140/140/sunglasses,fashion" alt="Fashion accessory">
+          <img src="https://loremflickr.com/140/140/wristwatch,accessory" alt="Fashion accessory">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Keep appliances for coveted spaces</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/blender,kitchen" alt="Home appliance">
+          <img src="https://loremflickr.com/140/140/toaster,kitchen" alt="Home appliance">
+          <img src="https://loremflickr.com/140/140/microwave,kitchen" alt="Home appliance">
+          <img src="https://loremflickr.com/140/140/airfryer,kitchen" alt="Home appliance">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+    </section>
+
+    <!-- ============================= -->
+    <!-- SCROLL ROW: PC INTERNATIONAL  -->
+    <!-- ============================= -->
+    <section class="scroll-section">
+      <div class="scroll-section__inner">
+        <h2 class="scroll-section__title">Popular products in PC International</h2>
+        <div class="scroll-row">
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/usb,charger" alt="PC accessory"><figcaption>Compact charging hub</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/stylus,pen" alt="PC accessory"><figcaption>Precision stylus pen</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/gaming,mouse" alt="PC accessory"><figcaption>Ergonomic gaming mouse</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/pocketknife,tool" alt="PC accessory"><figcaption>Foldable utility knife</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/usb,hub" alt="PC accessory"><figcaption>USB-C hub adapter</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/mechanical,keyboard" alt="PC accessory"><figcaption>Mechanical keyboard</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/headset,gaming" alt="PC accessory"><figcaption>Noise cancelling headset</figcaption></figure>
+        </div>
+        <a class="scroll-section__cta" href="#">See more &rsaquo;</a>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- SCROLL ROW: TOP PICKS FOR YOU -->
+    <!-- ============================= -->
+    <section class="scroll-section scroll-section--alt">
+      <div class="scroll-section__inner">
+        <h2 class="scroll-section__title">Top picks for you</h2>
+        <div class="scroll-row">
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/trimmer,grooming" alt="Recommended product"><figcaption>Cordless trimmer</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/toy,figures" alt="Recommended product"><figcaption>Kids' toy figure set</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/boardgame" alt="Recommended product"><figcaption>Board game bundle</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/toolbox,tools" alt="Recommended product"><figcaption>Heavy-duty toolbox</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/gaming,wheel" alt="Recommended product"><figcaption>Steering wheel controller</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/stroller,baby" alt="Recommended product"><figcaption>Compact stroller</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/tabletstand" alt="Recommended product"><figcaption>Portable tablet stand</figcaption></figure>
+        </div>
+        <a class="scroll-section__cta" href="#">See more &rsaquo;</a>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- THIRD CARD ROW                -->
+    <!-- ============================= -->
+    <section class="card-grid" aria-label="Lifestyle categories">
+      <article class="card">
+        <h2 class="card__title">Have more fun with family</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/family,boardgame" alt="Family activity product">
+          <img src="https://loremflickr.com/140/140/family,picnic" alt="Family activity product">
+          <img src="https://loremflickr.com/140/140/kids,playing" alt="Family activity product">
+          <img src="https://loremflickr.com/140/140/family,puzzle" alt="Family activity product">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Weekend travel essentials</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/suitcase,luggage" alt="Travel essential">
+          <img src="https://loremflickr.com/140/140/travel,backpack" alt="Travel essential">
+          <img src="https://loremflickr.com/140/140/passport,travel" alt="Travel essential">
+          <img src="https://loremflickr.com/140/140/packing,cubes" alt="Travel essential">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Meal-level lunches</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/lunchbox,food" alt="Lunch item">
+          <img src="https://loremflickr.com/140/140/sandwich,lunch" alt="Lunch item">
+          <img src="https://loremflickr.com/140/140/salad,healthy" alt="Lunch item">
+          <img src="https://loremflickr.com/140/140/bento,box" alt="Lunch item">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Gaming merchandise</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/gaming,controller" alt="Gaming merchandise">
+          <img src="https://loremflickr.com/140/140/gaming,headset" alt="Gaming merchandise">
+          <img src="https://loremflickr.com/140/140/gaming,keyboard" alt="Gaming merchandise">
+          <img src="https://loremflickr.com/140/140/gaming,merchandise" alt="Gaming merchandise">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+    </section>
+
+    <!-- ============================= -->
+    <!-- BEST SELLERS: CLOTHING        -->
+    <!-- ============================= -->
+    <section class="scroll-section">
+      <div class="scroll-section__inner">
+        <h2 class="scroll-section__title">Best Sellers in Clothing, Shoes &amp; Jewelry</h2>
+        <div class="scroll-row">
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/socks" alt="Clothing item"><figcaption>No-show socks pack</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/cargo,shorts" alt="Clothing item"><figcaption>Cargo shorts</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/clogs,shoes" alt="Clothing item"><figcaption>Classic clog shoes</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/black,tshirt" alt="Clothing item"><figcaption>Everyday tee, black</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/compression,sleeve" alt="Clothing item"><figcaption>Compression sleeves</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/linen,shirt" alt="Clothing item"><figcaption>Linen short-sleeve shirt</figcaption></figure>
+        </div>
+        <a class="scroll-section__cta" href="#">See more &rsaquo;</a>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- BEST SELLERS: HOME & KITCHEN  -->
+    <!-- ============================= -->
+    <section class="scroll-section scroll-section--alt">
+      <div class="scroll-section__inner">
+        <h2 class="scroll-section__title">Best Sellers in Home &amp; Kitchen</h2>
+        <div class="scroll-row">
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/bedsheet,bedding" alt="Home item"><figcaption>Cotton bedsheet set</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/water,bottle" alt="Home item"><figcaption>Insulated water bottle</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/picture,frame" alt="Home item"><figcaption>Wooden picture frame</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/wall,clock" alt="Home item"><figcaption>Smart wall clock</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/hanger,closet" alt="Home item"><figcaption>Velvet hanger set</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/travel,mug" alt="Home item"><figcaption>Travel mug, stainless</figcaption></figure>
+        </div>
+        <a class="scroll-section__cta" href="#">See more &rsaquo;</a>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- FOURTH CARD ROW               -->
+    <!-- ============================= -->
+    <section class="card-grid" aria-label="Wellness and hobby categories">
+      <article class="card">
+        <h2 class="card__title">Gear up for golf</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/golf,clubs" alt="Golf gear">
+          <img src="https://loremflickr.com/140/140/golf,ball" alt="Golf gear">
+          <img src="https://loremflickr.com/140/140/golf,glove" alt="Golf gear">
+          <img src="https://loremflickr.com/140/140/golf,bag" alt="Golf gear">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Level up your beauty routine</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/cosmetics,makeup" alt="Beauty product">
+          <img src="https://loremflickr.com/140/140/skincare,cream" alt="Beauty product">
+          <img src="https://loremflickr.com/140/140/perfume,bottle" alt="Beauty product">
+          <img src="https://loremflickr.com/140/140/lipstick,beauty" alt="Beauty product">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Level up your PC too</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/computer,accessories" alt="PC accessory">
+          <img src="https://loremflickr.com/140/140/webcam,laptop" alt="PC accessory">
+          <img src="https://loremflickr.com/140/140/monitor,desk" alt="PC accessory">
+          <img src="https://loremflickr.com/140/140/laptop,stand" alt="PC accessory">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Level up your gaming</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/gaming,controller" alt="Gaming accessory">
+          <img src="https://loremflickr.com/140/140/gaming,chair" alt="Gaming accessory">
+          <img src="https://loremflickr.com/140/140/gaming,mousepad" alt="Gaming accessory">
+          <img src="https://loremflickr.com/140/140/gaming,console" alt="Gaming accessory">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+    </section>
+
+    <!-- ============================= -->
+    <!-- BEST SELLERS: SPORTS          -->
+    <!-- ============================= -->
+    <section class="scroll-section">
+      <div class="scroll-section__inner">
+        <h2 class="scroll-section__title">Best Sellers in Sports &amp; Outdoors</h2>
+        <div class="scroll-row">
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/foam,roller" alt="Sports item"><figcaption>Foam roller</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/dumbbells,gym" alt="Sports item"><figcaption>Adjustable dumbbells</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/resistance,band" alt="Sports item"><figcaption>Resistance band set</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/sports,bottle" alt="Sports item"><figcaption>Insulated sports bottle</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/weighted,vest" alt="Sports item"><figcaption>Weighted training vest</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/yoga,mat" alt="Sports item"><figcaption>Yoga mat, non-slip</figcaption></figure>
+        </div>
+        <a class="scroll-section__cta" href="#">See more &rsaquo;</a>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- INTERNATIONAL TOP SELLERS     -->
+    <!-- ============================= -->
+    <section class="scroll-section scroll-section--alt">
+      <div class="scroll-section__inner">
+        <h2 class="scroll-section__title">International top sellers in Home</h2>
+        <div class="scroll-row">
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/papertowel" alt="International product"><figcaption>Paper towel bundle</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/ceramic,mug" alt="International product"><figcaption>Ceramic mug set</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/boardgame,family" alt="International product"><figcaption>Board game, family size</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/storage,bin" alt="International product"><figcaption>Storage bin set</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/bath,towel" alt="International product"><figcaption>Bath towel bundle</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/speaker,portable" alt="International product"><figcaption>Portable speaker</figcaption></figure>
+        </div>
+        <a class="scroll-section__cta" href="#">See more &rsaquo;</a>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- FIFTH CARD ROW                -->
+    <!-- ============================= -->
+    <section class="card-grid" aria-label="More categories">
+      <article class="card">
+        <h2 class="card__title">Deck out your pet</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/dog,pet" alt="Pet product">
+          <img src="https://loremflickr.com/140/140/cat,pet" alt="Pet product">
+          <img src="https://loremflickr.com/140/140/dog,leash" alt="Pet product">
+          <img src="https://loremflickr.com/140/140/pet,toy" alt="Pet product">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Shop the top PCs &amp; tablets</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/tablet,computer" alt="Tablet product">
+          <img src="https://loremflickr.com/140/140/laptop,computer" alt="Tablet product">
+          <img src="https://loremflickr.com/140/140/ipad,tablet" alt="Tablet product">
+          <img src="https://loremflickr.com/140/140/tablet,keyboard" alt="Tablet product">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Ready to move</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/moving,boxes" alt="Moving supplies">
+          <img src="https://loremflickr.com/140/140/packing,tape" alt="Moving supplies">
+          <img src="https://loremflickr.com/140/140/moving,truck" alt="Moving supplies">
+          <img src="https://loremflickr.com/140/140/bubble,wrap" alt="Moving supplies">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+      <article class="card">
+        <h2 class="card__title">Upgrade your home furniture</h2>
+        <div class="card__collage">
+          <img src="https://loremflickr.com/140/140/sofa,livingroom" alt="Furniture item">
+          <img src="https://loremflickr.com/140/140/dining,table" alt="Furniture item">
+          <img src="https://loremflickr.com/140/140/armchair,furniture" alt="Furniture item">
+          <img src="https://loremflickr.com/140/140/bookshelf,furniture" alt="Furniture item">
+        </div>
+        <a class="card__link" href="#">See more</a>
+      </article>
+    </section>
+
+    <!-- ============================= -->
+    <!-- POPULAR: WHOEVER BRAND        -->
+    <!-- ============================= -->
+    <section class="scroll-section">
+      <div class="scroll-section__inner">
+        <h2 class="scroll-section__title">Popular products in Electronics Accessories</h2>
+        <div class="scroll-row">
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/usb,cable" alt="Electronics accessory"><figcaption>Charging cable pack</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/earbuds,wireless" alt="Electronics accessory"><figcaption>Wireless earbuds</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/phone,case" alt="Electronics accessory"><figcaption>Slim phone case</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/powerbank,charger" alt="Electronics accessory"><figcaption>Portable power bank</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/dashcam,car" alt="Electronics accessory"><figcaption>Dash cam, compact</figcaption></figure>
+          <figure class="scroll-item"><img src="https://loremflickr.com/220/220/vr,headset" alt="Electronics accessory"><figcaption>VR headset</figcaption></figure>
+        </div>
+        <a class="scroll-section__cta" href="#">See more &rsaquo;</a>
+      </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- SIGN-IN CTA STRIP             -->
+    <!-- ============================= -->
+    <section class="cta-strip">
+      <p>See personalized recommendations</p>
+      <button class="btn btn--primary" type="button">Sign in</button>
+      <p class="cta-strip__new">New customer? <a href="#">Start here.</a></p>
+    </section>
+  </main>
+
+  <!-- ============================= -->
+  <!-- FOOTER                        -->
+  <!-- ============================= -->
+  <footer class="site-footer">
+    <a class="back-to-top" href="#top">Back to top</a>
+
+    <div class="footer-columns">
+      <section class="footer-column">
+        <h3>Get to Know Us</h3>
+        <ul>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">bazaario Newsletter</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Investor Relations</a></li>
+          <li><a href="#">bazaario Devices</a></li>
+          <li><a href="#">Sustainability</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-column">
+        <h3>Make Money with Us</h3>
+        <ul>
+          <li><a href="#">Sell products on bazaario</a></li>
+          <li><a href="#">Sell on bazaario Business</a></li>
+          <li><a href="#">Become an Affiliate</a></li>
+          <li><a href="#">Advertise Your Products</a></li>
+          <li><a href="#">Self-Publish with Us</a></li>
+          <li><a href="#">Host a Hub</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-column">
+        <h3>Payment Products</h3>
+        <ul>
+          <li><a href="#">bazaario Business Card</a></li>
+          <li><a href="#">Shop with Points</a></li>
+          <li><a href="#">Reload Your Balance</a></li>
+          <li><a href="#">Currency Converter</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-column">
+        <h3>Let Us Help You</h3>
+        <ul>
+          <li><a href="#">Your Account</a></li>
+          <li><a href="#">Your Orders</a></li>
+          <li><a href="#">Shipping Rates &amp; Policies</a></li>
+          <li><a href="#">Returns &amp; Replacements</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <a href="#" class="footer-logo">
+        <span class="logo__mark">b</span><span class="logo__text">azaario</span>
+      </a>
+
+      <div class="footer-bottom__controls">
+        <button class="footer-select" type="button">🌐 English</button>
+        <button class="footer-select" type="button">$ USD - U.S. Dollar</button>
+        <button class="footer-select" type="button">🇺🇸 United States</button>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <ul>
+        <li><a href="#">Conditions of Use</a></li>
+        <li><a href="#">Privacy Notice</a></li>
+        <li><a href="#">Your Ads Privacy Choices</a></li>
+      </ul>
+      <p>&copy; 2026 bazaario Clone Project, Inc. or its affiliates. Built for educational purposes only.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
